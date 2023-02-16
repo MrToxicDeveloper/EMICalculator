@@ -26,7 +26,7 @@ class _EMIcalcState extends State<EMIcalc> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF2C3333),
+          backgroundColor: Colors.red,
           leading: Icon(Icons.all_inclusive),
           title: Text("EMI calc",
               style: TextStyle(color: Color(0xFFE7F6F2), letterSpacing: 2)),
@@ -42,11 +42,9 @@ class _EMIcalcState extends State<EMIcalc> {
                   BoxShadow(
                       color: Colors.black12, blurRadius: 5, spreadRadius: 5),
                 ],
-                color: Color(0xFF395B64),
+                color: Colors.red,
               ),
             ),
-
-            // per month emi text / container
             Container(
               height: 150,
               width: double.infinity,
@@ -59,11 +57,9 @@ class _EMIcalcState extends State<EMIcalc> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // per month emi
                       Container(
                         height: 100,
                         width: 200,
-                        //color: Colors.white,
                         child: Column(
                           children: [
                             Text("Your EMI is",style: TextStyle(color: Color(0xFFE7F6F2),letterSpacing: 2,fontSize: 10,),),
@@ -92,15 +88,9 @@ class _EMIcalcState extends State<EMIcalc> {
                       ),
                     ],
                   ),
-
-
-
                 ],
               ),
             ),
-
-
-            // container of slider
             Center(
               child: Padding(
                 padding:
@@ -118,7 +108,7 @@ class _EMIcalcState extends State<EMIcalc> {
                             spreadRadius: 5),
                       ],
                       borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: Color(0xFFA5C9CA),
+                      color: Colors.red.shade100,
                     ),
                     child: Column(
                       children: [
@@ -146,8 +136,8 @@ class _EMIcalcState extends State<EMIcalc> {
                         Slider(
                           max: 1000000,
                           divisions: 10,
-                          activeColor: Color(0xFF2C3333),
-                          inactiveColor: Color(0xFF395B50),
+                          activeColor: Colors.red,
+                          inactiveColor: Colors.redAccent.shade100,
                           value: loanAmount,
                           onChanged: (value) {
                             setState(() {
@@ -176,8 +166,8 @@ class _EMIcalcState extends State<EMIcalc> {
                         Slider(
                           max: 15,
                           divisions: 15,
-                          activeColor: Color(0xFF2C3333),
-                          inactiveColor: Color(0xFF395B50),
+                          activeColor: Colors.red,
+                          inactiveColor: Colors.redAccent.shade100,
                           value: loanInterest,
                           onChanged: (value) {
                             setState(() {
@@ -207,8 +197,8 @@ class _EMIcalcState extends State<EMIcalc> {
                         Slider(
                           max: 10,
                           divisions: 10,
-                          activeColor: Color(0xFF2C3333),
-                          inactiveColor: Color(0xFF395B50),
+                          activeColor: Colors.red,
+                          inactiveColor: Colors.redAccent.shade100,
                           value: loanYears,
                           onChanged: (value) {
                             setState(() {
@@ -238,22 +228,9 @@ class _EMIcalcState extends State<EMIcalc> {
                                 height: 55,
                                 width: 150,
                                 decoration: BoxDecoration(
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: Color(0xFF2C3333),
-                                          blurRadius: 1,
-                                          spreadRadius: 1),
-                                      BoxShadow(
-                                          color: Color(0xFF395B64),
-                                          blurRadius: 1,
-                                          spreadRadius: 1),
-                                    ],
-                                    color: Color(0xFF2C3333),
+                                    color: Colors.red,
                                     borderRadius: BorderRadius.circular(10),
-                                    gradient: LinearGradient(colors: [
-                                      Color(0xFF2C3333),
-                                      Color(0xFF395B64),
-                                    ])),
+                                   ),
                                 child: Center(
                                   child: Text("Clear",
                                       style: TextStyle(
@@ -286,21 +263,9 @@ class _EMIcalcState extends State<EMIcalc> {
                                 height: 55,
                                 width: 150,
                                 decoration: BoxDecoration(
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: Color(0xFF2C3333),
-                                          blurRadius: 1,
-                                          spreadRadius: 1),
-                                      BoxShadow(
-                                          color: Color(0xFF395B64),
-                                          blurRadius: 1,
-                                          spreadRadius: 1),
-                                    ],
+                                  color: Colors.red,
                                     borderRadius: BorderRadius.circular(10),
-                                    gradient: LinearGradient(colors: [
-                                      Color(0xFF2C3333),
-                                      Color(0xFF395B64),
-                                    ])),
+                                    ),
                                 child: Center(
                                   child: Text("Count",
                                       style: TextStyle(
